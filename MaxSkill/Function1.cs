@@ -7,7 +7,7 @@ using AlexaSkillsKit.UI;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Host;
 
-namespace SlackPoster
+namespace MaxSkill
 {
 	public static class Function1
 	{
