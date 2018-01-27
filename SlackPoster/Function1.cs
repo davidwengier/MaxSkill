@@ -43,20 +43,7 @@ namespace SlackPoster
 						return Task.FromResult(BuildSpeechletResponse("Max Thinks", "Max thinks " + intentRequest.Intent.Slots["message"].Value + " is silly pants.", true));
 					}
 				}
-
-				if (intentRequest.Intent.Name.Equals("CheckInIntent"))
-				{
-					return Task.FromResult(BuildSpeechletResponse("Checked In Students", "There are currently 214 students that are In Room.", true));
-				}
-
-				if (intentRequest.Intent.Slots.Count == 0)
-				{
-					return Task.FromResult(BuildSpeechletResponse("Posted", "Okay, I've posted that message", true));
-				}
-				else
-				{
-					return Task.FromResult(BuildSpeechletResponse("Posted", "Okay, I've posted: " + intentRequest.Intent.Slots["message"].Value, true));
-				}
+				return Task.FromResult(BuildSpeechletResponse("Huh?", "huh?", true));
 			}
 
 			public override Task<SpeechletResponse> OnLaunchAsync(LaunchRequest launchRequest, Session session)
